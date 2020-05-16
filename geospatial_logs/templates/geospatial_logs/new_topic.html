@@ -1,0 +1,22 @@
+{% extends "geospatial_logs/base.html" %}
+{% load bootstrap3 %}
+
+{% block header %}
+  <h2>Добавить новую тему:</h2>
+{% endblock header %}
+
+{% block content %}
+    
+  <form action="{% url 'geospatial_logs:new_topic' %}" method='post'
+      class="form">
+      
+    {% csrf_token %}
+    {% bootstrap_form form %}
+    
+    {% buttons %}
+      <button name="submit" class="btn btn-primary">Новая тема</button>
+    {% endbuttons %}
+    
+  </form>
+    
+{% endblock content %}

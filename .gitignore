@@ -1,0 +1,6 @@
+*.sqlite3
+django.txt
+draft_templates.html
+gs_env/
+images/
+__pycache__/

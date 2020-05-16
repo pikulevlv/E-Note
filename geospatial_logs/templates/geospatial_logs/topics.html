@@ -1,0 +1,23 @@
+{% extends 'geospatial_logs/base.html' %}
+
+{% block header %}
+  <h1>ТЕМЫ</h1>
+{% endblock %}
+
+{% block content %}
+
+  <ul>
+    {% for topic in topics %}
+      <li>
+        <h3>
+          <a href="{% url 'geospatial_logs:topic' topic.id %}">{{ topic }}</a>
+        </h3>
+      </li>
+    {% empty %}
+      <li>Ни одной темы еще не добавлено.</li>
+    {% endfor %}
+  </ul>
+  
+  <h4><br><a href="{% url 'geospatial_logs:new_topic' %}">Добавить новую тему</br></h4>
+
+{% endblock content %}

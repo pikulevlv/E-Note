@@ -1,0 +1,15 @@
+{% extends "geospatial_logs/base.html" %}
+
+{% block content %}
+
+  <p><a href="{% url 'geospatial_logs:topic' topic.id %}">{{ topic }}</a></p>
+    
+  <p>Редактировать запись:</p>
+    
+  <form action="{% url 'geospatial_logs:edit_entry' entry.id %}" method='post'>
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button name="submit">Сохранить изменения</button>
+  </form>
+
+{% endblock content %}
