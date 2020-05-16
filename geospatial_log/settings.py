@@ -23,7 +23,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'qb!1iexl%%wya=zdj5bvwg^qz%%@r2rbin0q$43rz8*bhq^%h5'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = []
 
@@ -164,7 +164,8 @@ if cwd == '/app' or cwd[:4] == '/tmp':
     
     # Only allow heroku to host the project.
     # ALLOWED_HOSTS = ['learning-log-final.herokuapp.com']
-    ALLOWED_HOSTS = ['.herokuapp.com', ".researchthroughdesign.org"]
+    ALLOWED_HOSTS = ['e-note-log.herokuapp.com']
+    
     DEBUG = False
 
     # Static asset configuration
