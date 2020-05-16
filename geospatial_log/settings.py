@@ -59,7 +59,7 @@ ROOT_URLCONF = 'geospatial_log.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR, 'geospatial_log/templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -165,7 +165,7 @@ if cwd == '/app' or cwd[:4] == '/tmp':
     # Only allow heroku to host the project.
     # ALLOWED_HOSTS = ['learning-log-final.herokuapp.com']
     ALLOWED_HOSTS = ['e-note-log.herokuapp.com']
-    
+
     DEBUG = False
 
     # Static asset configuration
